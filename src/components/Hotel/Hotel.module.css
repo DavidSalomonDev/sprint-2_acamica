@@ -1,0 +1,38 @@
+.hotel{
+    padding: 2.5rem;
+    width: 100%;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    font-size: 1.3rem;
+}
+
+.img{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.7);
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn:hover{
+    color: var(--primary-color);
+    background-color: #eee;
+}

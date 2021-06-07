@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 30vh;
+    position: relative;
+    padding: 10rem 10%;
+}
+
+.title{
+    font-size: 7rem;
+    margin-bottom: 1rem;
+}
+
+.info{
+    font-size: 2rem;
+}

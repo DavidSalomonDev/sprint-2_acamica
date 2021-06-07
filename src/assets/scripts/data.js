@@ -5,9 +5,10 @@
 const today = new Date()
 const hotelsData = [
   {
+    id: 1,
     slug: 'la-bamba-de-areco',
     name: 'La Bamba de Areco',
-    photo: './images/la-bamba-de-areco.jpg',
+    photo: '../../assets/images/la-bamba-de-areco.jpg',
     description: 'La Bamba de Areco está ubicada en San Antonio de Areco, en el corazón de la pampa. Es una de las estancias más antiguas de la Argentina, recientemente restaurada para ofrecer a sus huéspedes todo el confort y esplendor colonial.',
     availabilityFrom: today.valueOf(),
     availabilityTo: today.valueOf() + 864000000, // 10 days
@@ -17,6 +18,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 2,
     slug: 'sainte-jeanne',
     name: 'Sainte Jeanne Boutique & Spa',
     photo: './images/sainte-jeanne.jpg',
@@ -29,6 +31,7 @@ const hotelsData = [
     price: 2
   },
   {
+    id: 3,
     slug: 'entre-cielos',
     name: 'Entre Cielos',
     photo: './images/entre-cielos.jpg',
@@ -41,6 +44,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 4,
     slug: 'huacalera',
     name: 'Hotel Huacalera',
     photo: './images/huacalera.jpg',
@@ -53,6 +57,7 @@ const hotelsData = [
     price: 1
   },
   {
+    id: 5,
     slug: 'merced-del-alto',
     name: 'La Merced del Alto',
     photo: './images/merced-del-alto.jpg',
@@ -65,6 +70,7 @@ const hotelsData = [
     price: 2
   },
   {
+    id: 6,
     slug: 'azur-real',
     name: 'Azur Real Hotel',
     photo: './images/azur-real.jpg',
@@ -77,6 +83,7 @@ const hotelsData = [
     price: 1
   },
   {
+    id: 7,
     slug: 'rincon-del-socorro',
     name: 'Rincón del Socorro',
     photo: './images/rincon-del-socorro.jpg',
@@ -89,6 +96,7 @@ const hotelsData = [
     price: 2
   },
   {
+    id: 8,
     slug: 'luma-casa-de-montana',
     name: 'Luma Casa de Montaña',
     photo: './images/luma-casa-de-montana.jpg',
@@ -100,7 +108,8 @@ const hotelsData = [
     country: 'Argentina',
     price: 2
   },
-  {
+  { 
+    id: 9,
     slug: 'casa-turquesa',
     name: 'Casa Turquesa',
     photo: './images/casa-turquesa.jpg',
@@ -113,6 +122,7 @@ const hotelsData = [
     price: 3
   },
   {
+    id: 10,
     slug: 'vila-da-santa',
     name: 'Vila Da Santa',
     photo: './images/vila-da-santa.jpg',
@@ -125,6 +135,7 @@ const hotelsData = [
     price: 3
   },
   {
+    id: 11,
     slug: 'uxua-casa',
     name: 'UXUA Casa Hotel & Spa',
     photo: './images/uxua-casa.jpg',
@@ -137,6 +148,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 12,
     slug: 'ponta-dos-ganchos',
     name: 'Ponta dos Ganchos',
     photo: './images/uxua-casa.jpg',
@@ -149,6 +161,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 13,
     slug: 'alto-atacama',
     name: 'Alto Atacama',
     photo: './images/alto-atacama.jpg',
@@ -161,6 +174,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 14,
     slug: 'tierra-patagonia',
     name: 'Tierra Patagonia',
     photo: './images/tierra-patagonia.jpg',
@@ -173,9 +187,10 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 15,
     slug: 'vira-vira',
     name: 'Vira Vira',
-    photo: './images/vira-vira.jpg',
+    photo: '../../assets/images/vira-vira.jpg',
     description: 'Hotel Hacienda Vira Vira Relais & Chateaux se encuentra en una ubicación privilegiada, muy cerca de Pucón, Chile. Su impresionante parque nativo de 23 hectáreas a orillas del río Liucura ofrece un oasis único de paz y tranquilidad.',
     availabilityFrom: today.valueOf() + 864000000, // 10 days
     availabilityTo: today.valueOf() + 1728000000, // 20 days
@@ -185,6 +200,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id:16,
     slug: 'vik-chile',
     name: 'Vik Chile',
     photo: './images/vik-chile.jpg',
@@ -197,6 +213,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id:17,
     slug: 'casa-higueras',
     name: 'Casa Higueras',
     photo: './images/casa-higueras.jpg',
@@ -209,9 +226,10 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 18,
     slug: 'campo-tinto',
     name: 'Campo Tinto',
-    photo: './images/campo-tinto.jpg',
+    photo: '../../assets/images/campo-tinto.jpg',
     description: 'Campo Tinto es una chacra de 25 hectáreas ubicada en el corazón de San Roque, en medio del ondulante Carmelo, una zona de chacras, viñedos, bodegas y frutales, con mucha historia y un ritmo de vida tranquilo y natural.',
     availabilityFrom: today.valueOf() + 2160000000, // 25 days
     availabilityTo: today.valueOf() + 2592000000, // 30 days
@@ -221,3 +239,7 @@ const hotelsData = [
     price: 1
   }
 ]
+
+console.log(hotelsData)
+
+export default hotelsData

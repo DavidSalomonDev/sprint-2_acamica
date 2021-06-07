@@ -14,8 +14,9 @@ de React como librería
 2. Organizar los archivos (`create-react-app`)
 3. Configurar los estilos iniciales
 
-Decidí usar `CSS Grid` para formar un layout simple y el modulo de `styled-components` para usar CSS dentro del React
-component
+Decidí usar `CSS Grid` para formar un layout simple, traté de usar el modulo de `styled-components` para usar CSS dentro del React component pero me pareció un poco complicado al momento de ingresar contenido en los componentes.
+
+También pensé usar `MaterialUI` como librería, pero eso requería dedicar más tiempo al aprendizaje de la librería así que solo tomaré los componentes que necesite de ella y lo demás lo estilizaré con `CSS modules` ya que sería una transición suave de HTML y CSS a React.
 
 ## Desarrollo
 
