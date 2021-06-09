@@ -1,7 +1,7 @@
 import React from 'react'
 import Hotel from '../Hotel/Hotel.jsx'
 import style from './Hotels.module.css'
-import hotelsData from '../../assets/scripts/data'
+import hotelsData from '../../scripts/data'
 
 
 const Hotels = () => {

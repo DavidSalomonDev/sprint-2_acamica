@@ -2,7 +2,6 @@
 // En una aplicación convencional estos datos provendrían desde un back-end pero a los fines de este ejercicio utilizaremos variables pre-definidas.
 // Utilizamos fechas dinámicas para que la aplicación siempre muestre un rango de días entre la fecha actual y el futuro.
 
-
 const today = new Date()
 
 
@@ -11,7 +10,7 @@ const hotelsData = [
     id: 1,
     slug: 'la-bamba-de-areco',
     name: 'La Bamba de Areco',
-    photo: '../../assets/images/la-bamba-de-areco.jpg',
+    photo: './images/la-bamba-de-areco.jpg',
     description: 'La Bamba de Areco está ubicada en San Antonio de Areco, en el corazón de la pampa. Es una de las estancias más antiguas de la Argentina, recientemente restaurada para ofrecer a sus huéspedes todo el confort y esplendor colonial.',
     availabilityFrom: today.valueOf(),
     availabilityTo: today.valueOf() + 864000000, // 10 days

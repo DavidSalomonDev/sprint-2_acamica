@@ -1,11 +1,11 @@
 import React from 'react'
 import style from './Hotel.module.css'
-import image from '../../assets/images/la-bamba-de-areco.jpg'
+// import image from '../../assets/images/la-bamba-de-areco.jpg'
 
 const Hotel = (props) => {
     return (
         <div className={style.hotel}>
-            <img className={style.img} src={image} alt={props.data.name} />
+            <img className={style.img} src={props.data.photo} alt={props.data.name} />
             <h2 className={style.name}>{props.data.name}</h2>
             <h3 className={style.startDate}>Desde el {props.data.availabilityFrom}</h3>
             <h3 className={style.endDate}>Hasta el {props.data.availabilityTo}</h3>
