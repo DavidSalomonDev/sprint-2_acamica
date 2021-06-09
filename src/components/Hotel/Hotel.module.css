@@ -11,10 +11,24 @@
     margin-bottom: 3rem;
 }
 
+.name{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.description{
+    font-size: 1.8rem;
+    overflow: scroll;
+    padding: 1rem 0;
+    height: 12rem;
+    line-height: 1.6;
+}
+
 .btn{
     display: block;
     width: 100%;
     padding: 1rem;
+    margin: 1rem 0;
     border-radius: 1rem;
     background-color: var(--primary-color);
     color: #fff;
@@ -28,11 +42,46 @@
     transition: all .3s ease;
 }
 
-.btn:active{
+.btn:hover:active{
     transform: scale(0.98);
 }
 
 .btn:hover{
     color: var(--primary-color);
     background-color: #eee;
+    transform: scale(1.08);
+}
+
+.startDate, .endDate{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transition: all .3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+.startDate:hover, .endDate:hover{
+    transform: scale(1.08);
+}
+
+.location{
+    padding: 1.4rem 1rem;
+    font-size: 2rem;
+    box-shadow: 1px 1px .5rem rgba(0,0,0,0.7);
+    margin: 2rem 0;
+}
+
+.wrapper{
+    margin: 3rem 0;
+}
+
+.rooms, .price{
+    padding: 1.4rem 1rem;
+    font-size: 2rem;
+    box-shadow: 1px 1px .5rem rgba(0,0,0,0.7);
+    
 }

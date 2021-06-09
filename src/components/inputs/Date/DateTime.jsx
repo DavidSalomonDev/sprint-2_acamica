@@ -8,7 +8,7 @@ import {
 import style from './inputs.module.css'
 
 const DateTime = () => {
-    const [selectedDate, setSelectedDate] = React.useState(new Date('2021-06-01T21:11:54'));
+    const [selectedDate, setSelectedDate] = React.useState(new Date());
 
     const handleDateChange = (date) => {
         setSelectedDate(date);
@@ -20,7 +20,7 @@ const DateTime = () => {
                 <KeyboardDatePicker
                     className={style.modal}
                     margin="normal"
-                    id="date-picker-dialog"
+                    // id="date-picker-dialog"
                     label="Cualquier fecha"
                     format="MM/dd/yyyy"
                     value={selectedDate}

@@ -11,7 +11,10 @@ const Hotel = (props) => {
             <h3 className={style.endDate}>Hasta el {props.data.availabilityTo}</h3>
             <p className={style.description}>{props.data.description}</p>
             <p className={style.location}>{props.data.city}, {props.data.country}</p>
-            <span className={style.rooms}>{props.data.rooms} Habitaciones</span> <span className={style.price}>Precio: {props.data.price}</span>
+            <div className={style.wrapper}>
+                <span className={style.rooms}>{props.data.rooms} Habitaciones</span> <span className={style.price}>Precio: {props.data.price}</span>
+            </div>
+
             <button className={style.btn}>Reservar</button>
         </div>
     )

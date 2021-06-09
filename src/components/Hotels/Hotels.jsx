@@ -7,6 +7,16 @@ import hotelsData from '../../assets/scripts/data'
 const Hotels = () => {
 
     const hotelComponents = hotelsData.map(hotel => {
+
+        //Time conversor from miliseconds to Spanish dates
+
+        const days = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado']
+        const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+        const fullDateFrom = new Date(hotel.availabilityFrom)
+        const fullDateTo = new Date(hotel.availabilityTo)
+        const dateFrom = `${days[fullDateFrom.getDay()]}, ${fullDateFrom.getDate()} de ${months[fullDateFrom.getMonth()]} de ${fullDateFrom.getFullYear()}`
+        const dateTo = `${days[fullDateTo.getDay()]}, ${fullDateTo.getDate()} de ${months[fullDateTo.getMonth()]} de ${fullDateTo.getFullYear()}`
+
         return (
             <Hotel
                 data={{
@@ -14,8 +24,8 @@ const Hotels = () => {
                     name: hotel.name,
                     photo: hotel.photo,
                     description: hotel.description,
-                    availabilityFrom: hotel.availabilityFrom,
-                    availabilityTo: hotel.availabilityTo,
+                    availabilityFrom: dateFrom,
+                    availabilityTo: dateTo,
                     rooms: hotel.rooms,
                     city: hotel.city,
                     country: hotel.country,
