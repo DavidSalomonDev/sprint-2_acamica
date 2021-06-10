@@ -1,0 +1,44 @@
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 1rem;
+    padding: 0 .5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+	width: 95%;
+	height: 7rem;
+}
+
+.country{
+	grid-column: 3 / 4;
+}
+
+.countrySelect{
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	font-family: 'Roboto';
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.countrySelect:active, .countrySelect:focus{
+	outline: none;
+}
+
+.countrySelect:active ~ option:first-child{
+	display: none;
+}
+
+.countryOption *{
+	background-color: #eee;
+	cursor: pointer;
+	padding: 2rem;
+	
+}
+
+.countryOption:hover{
+	cursor: pointer;
+}

@@ -5,7 +5,7 @@ import {
 	MuiPickersUtilsProvider,
 	KeyboardDatePicker,
 } from '@material-ui/pickers'
-import style from './inputs.module.css'
+import style from '../../inputs/inputs.module.css'
 
 const DateTime = () => {
 	const [selectedDate, setSelectedDate] = React.useState(new Date())
@@ -15,7 +15,7 @@ const DateTime = () => {
 	}
 
 	return (
-		<div className={style.dateTime}>
+		<div className={style.input}>
 			<MuiPickersUtilsProvider utils={DateFnsUtils}>
 				<KeyboardDatePicker
 					className={style.modal}

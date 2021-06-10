@@ -2,7 +2,7 @@ import React from 'react'
 import Hotel from '../Hotel/Hotel.jsx'
 import style from './Hotels.module.css'
 import hotelsData from '../../scripts/data'
-import dateConversor from '../utils/functions'
+import { dateConversor } from '../utils/functions'
 
 
 const Hotels = () => {
