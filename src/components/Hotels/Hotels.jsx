@@ -11,8 +11,9 @@ const Hotels = () => {
 
         return (
             <Hotel
+                key={hotel.slug}
                 data={{
-                    key: hotel.slug,
+                    slug: hotel.slug,
                     name: hotel.name,
                     photo: hotel.photo,
                     description: hotel.description,

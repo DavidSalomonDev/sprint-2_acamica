@@ -153,7 +153,7 @@ const hotelsData = [
     id: 12,
     slug: 'ponta-dos-ganchos',
     name: 'Ponta dos Ganchos',
-    photo: './images/uxua-casa.jpg',
+    photo: './images/ponta-dos-ganchos.jpg',
     description: 'Ubicado a pasos de San Pablo, Río de Janeiro, e incluso Buenos Aires, en una península privada y rodeado por un pintoresco pueblo de pescadores, se encuentra Ponta dos Ganchos, uno de los resorts de playa más exclusivos del sur de Brasil.',
     availabilityFrom: today.valueOf() + 432000000, // 5 days
     availabilityTo: today.valueOf() + 864000000, // 10 days
@@ -192,7 +192,7 @@ const hotelsData = [
     id: 15,
     slug: 'vira-vira',
     name: 'Vira Vira',
-    photo: '../../assets/images/vira-vira.jpg',
+    photo: './images/vira-vira.jpg',
     description: 'Hotel Hacienda Vira Vira Relais & Chateaux se encuentra en una ubicación privilegiada, muy cerca de Pucón, Chile. Su impresionante parque nativo de 23 hectáreas a orillas del río Liucura ofrece un oasis único de paz y tranquilidad.',
     availabilityFrom: today.valueOf() + 864000000, // 10 days
     availabilityTo: today.valueOf() + 1728000000, // 20 days
@@ -231,7 +231,7 @@ const hotelsData = [
     id: 18,
     slug: 'campo-tinto',
     name: 'Campo Tinto',
-    photo: '../../assets/images/campo-tinto.jpg',
+    photo: './images/campo-tinto.jpg',
     description: 'Campo Tinto es una chacra de 25 hectáreas ubicada en el corazón de San Roque, en medio del ondulante Carmelo, una zona de chacras, viñedos, bodegas y frutales, con mucha historia y un ritmo de vida tranquilo y natural.',
     availabilityFrom: today.valueOf() + 2160000000, // 25 days
     availabilityTo: today.valueOf() + 2592000000, // 30 days
