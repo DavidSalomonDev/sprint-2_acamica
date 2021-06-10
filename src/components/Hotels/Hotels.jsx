@@ -7,32 +7,32 @@ import dateConversor from '../utils/functions'
 
 const Hotels = () => {
 
-    const hotelComponents = hotelsData.map(hotel => {
+	const hotelComponents = hotelsData.map(hotel => {
 
-        return (
-            <Hotel
-                key={hotel.slug}
-                data={{
-                    slug: hotel.slug,
-                    name: hotel.name,
-                    photo: hotel.photo,
-                    description: hotel.description,
-                    availabilityFrom: dateConversor(hotel.availabilityFrom),
-                    availabilityTo: dateConversor(hotel.availabilityTo),
-                    rooms: hotel.rooms,
-                    city: hotel.city,
-                    country: hotel.country,
-                    price: hotel.price,
-                }}
-            />
-        )
-    })
+		return (
+			<Hotel
+				key={hotel.slug}
+				data={{
+					slug: hotel.slug,
+					name: hotel.name,
+					photo: hotel.photo,
+					description: hotel.description,
+					availabilityFrom: dateConversor(hotel.availabilityFrom),
+					availabilityTo: dateConversor(hotel.availabilityTo),
+					rooms: hotel.rooms,
+					city: hotel.city,
+					country: hotel.country,
+					price: hotel.price,
+				}}
+			/>
+		)
+	})
 
-    return (
-        <div className={style.hotels}>
-            {hotelComponents}
-        </div>
-    )
+	return (
+		<div className={style.hotels}>
+			{hotelComponents}
+		</div>
+	)
 }
 
 export default Hotels

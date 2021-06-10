@@ -4,13 +4,13 @@ import Navbar from './Navbar/Navbar.jsx'
 import Hotels from './Hotels/Hotels.jsx'
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Navbar />
-      <Hotels />
-    </div>
-  );
+	return (
+		<div className="App">
+			<Header />
+			<Navbar />
+			<Hotels />
+		</div>
+	)
 }
 
-export default App;
+export default App
