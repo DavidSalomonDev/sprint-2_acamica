@@ -10,7 +10,7 @@ function Country() {
 	const countryOptions = countries.map(country => {
 		return (
 			// eslint-disable-next-line react/jsx-key
-			<option value={country} className={style.countryOption}>{country}</option>
+			<option key={country} value={country} className={style.countryOption}>{country}</option>
 		)
 	})
 

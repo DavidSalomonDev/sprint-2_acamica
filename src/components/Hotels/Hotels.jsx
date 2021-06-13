@@ -29,7 +29,7 @@ const Hotels = () => {
 	})
 
 	return (
-		<div className={style.hotels}>
+		<div className={style.hotels} id='hotels'>
 			{hotelComponents}
 		</div>
 	)

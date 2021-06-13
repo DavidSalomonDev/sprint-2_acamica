@@ -1,8 +1,15 @@
-.navbar{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr) 0.5fr;
-    width: 100%;
-	height: min-content;
-    background-color: royalblue;
+.navbar {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	width: minmax(3rem, min-content);
+	max-height: min-content;
+	background-color: royalblue;
+	padding: 0 1rem;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.4);
+	border-bottom-right-radius: 1rem;
+	border-bottom-left-radius: 1rem;
 }
-

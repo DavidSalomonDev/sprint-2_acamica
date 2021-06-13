@@ -1,7 +1,7 @@
 /**
  * It returns a readable Spanish date from miliseconds data
  *
- * @param {miliseconds} date Date in milisencods
+ * @param {number} date Date in milisencods
  * @returns Date in Spanish format
  */
 export const dateConversor = (date) => {
@@ -34,6 +34,7 @@ export const dateConversor = (date) => {
 		months[fromMiliSeconds.getMonth()]
 	} de ${fromMiliSeconds.getFullYear()}`
 }
+
 /**
  *
  * Returns an array without duplicates, it iterates over an array that contains objects with several properties
@@ -50,3 +51,28 @@ export const removeDuplicates = (arrayElement, objectProperty) => {
 	const withoutDuplicates = [...new Set(allElements)]
 	return withoutDuplicates
 }
+
+export const sizeConvertor = (hotelRooms) => {
+	if (hotelRooms < 10) {
+		return 'Pequeño'
+	} else if (hotelRooms >= 10 && hotelRooms < 20) {
+		return 'Mediano'
+	} else return 'Grande'
+}
+
+export const sizeCategories = (array) => {
+	const newArray = array.map((hotel) => {
+		return (hotel.rooms = sizeConvertor(hotel.rooms))
+	})
+	const withoutDuplicates = [...new Set(newArray)]
+	return withoutDuplicates
+}
+
+// export const highlightHotel = () => {
+// 	const highlight = 'highlight'
+// 	const highlightClass = 'highlight-is-active'
+// 	const body = document.querySelector('body')
+// 	let isHighlightActive = false
+// 	let highlightedHotel
+// 	let clickBubbling = 0
+// }

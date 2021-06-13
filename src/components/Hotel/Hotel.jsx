@@ -3,6 +3,7 @@ import React from 'react'
 import style from './Hotel.module.css'
 
 const Hotel = (props) => {
+
 	return (
 		<div className={style.hotel} id={props.data.slug}>
 			<img className={style.img} src={props.data.photo} alt={props.data.name} />
