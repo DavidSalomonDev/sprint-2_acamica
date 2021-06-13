@@ -1,6 +1,7 @@
 .navbar {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	justify-items: center;
 	width: minmax(3rem, min-content);
 	max-height: min-content;
 	background-color: royalblue;
@@ -8,6 +9,7 @@
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+	margin-bottom: 1.5rem;
 	z-index: 1000;
 	box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.4);
 	border-bottom-right-radius: 1rem;

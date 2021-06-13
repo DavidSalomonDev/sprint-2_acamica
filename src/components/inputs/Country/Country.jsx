@@ -17,7 +17,7 @@ function Country() {
 	return (
 		<div className={`${style.input} ${style.country}`}>
 			<select name="country" id="country" className={style.countrySelect}>
-				<option value="" selected>Todos los países</option>
+				<option value="" defaultValue>Todos los países</option>
 				{countryOptions}
 			</select>
 		</div>

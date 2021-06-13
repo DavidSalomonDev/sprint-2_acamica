@@ -18,7 +18,7 @@ const Size = () => {
 
 		<div className={`${style.input} ${style.size}`}>
 			<select name="rooms" id="rooms">
-				<option value="todos" selected>Todos los tamaños</option>
+				<option value="todos" defaultValue>Todos los tamaños</option>
 				<option value="pequeño">Pequeño</option>
 				<option value="mediano">Mediano</option>
 				<option value="grande">Grande</option>

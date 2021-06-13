@@ -2,31 +2,31 @@
 	--select-border: #777;
 	--select-focus: blue;
 	--select-arrow: var(--select-border);
-  }
+}
 
-.input{
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    margin: 2rem .5rem;
-    padding: 0 .5rem;
-    background-color: #fff;
-    border-radius: 1rem;
-	box-shadow: 1px 1px 1rem rgba(0,0,0,0.4);
+.input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1.5rem 0.5rem;
+	padding: 0 0.5rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.4);
 	width: 90%;
 	height: 7rem;
 	cursor: pointer;
 }
 
-.country{
+.country {
 	grid-column: 3 / 4;
 }
 
-.input select{
+.input select {
 	appearance: none;
 	background-color: transparent;
 	border: none;
-	padding: 0 .5em;
+	padding: 0 0.5em;
 	margin: 0;
 	width: 100%;
 	font-family: inherit;
@@ -35,14 +35,12 @@
 	line-height: inherit;
 }
 
-.input select:active{
+.input select:active {
 	outline: none;
 }
 
-.countrySelect{
+.countrySelect {
 	width: 100%;
-	min-width: 15ch;
-	max-width: 30ch;
 	border: 1px solid var(--select-border);
 	border-radius: 0.25em;
 	padding: 0.25em 0.5em;
@@ -53,50 +51,46 @@
 	background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
 
-.countrySelect::after {
-	content: "";
-	width: 0.8em;
-	height: 0.5em;
-	background-color: var(--select-arrow);
-	clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-  }
-
-.countrySelect:active, .countrySelect:focus{
+.countrySelect:active,
+.countrySelect:focus {
 	outline: none;
 }
 
-.countrySelect:active ~ option:first-child{
+.countrySelect:active ~ option:first-child {
 	display: none;
 }
 
-.countryOption *{
+.countryOption * {
 	background-color: #eee;
 	cursor: pointer;
 	padding: 2rem;
-	
 }
 
-.countryOption:hover{
+.countryOption:hover {
 	cursor: pointer;
 }
 
-.size{}
+.size {
+}
 
-.price{}
+.price {
+}
 
-.clear{
+.clear {
 	background-color: #ff1744;
 	color: #fff;
 	font-size: 2rem;
 	border: none;
-	transition: all .3s;
+	transition: all 0.3s;
+	width: 100%;
+	padding: 0 3rem;
 }
 
-.clear:active{
-	transform: translateY(.5rem);
+.clear:active {
+	transform: translateY(0.5rem);
 }
 
-.clear:hover{
+.clear:hover {
 	background-color: #fff;
 	color: #ff1744;
 	font-weight: bold;
