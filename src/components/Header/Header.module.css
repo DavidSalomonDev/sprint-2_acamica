@@ -38,11 +38,11 @@ header > *{
 }
 
 .infoLeft{
-	animation: moveLeft .8s ease-in-out;
+	animation: moveLeft 1s ease-in-out;
 }
 
 .infoRight{
-	animation: moveRight 1.3s ease-in-out;
+	animation: moveRight 1s ease-in-out;
 }
 
 .video{
