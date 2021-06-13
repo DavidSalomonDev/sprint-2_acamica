@@ -11,10 +11,10 @@ const Header = () => {
 				</video>
 			</div>
 			<h1 className={style.title}>Hoteles</h1>
-			<p className={style.info}>En cualquier fecha</p>
-			<p className={style.info}>En cualquier país</p>
-			<p className={style.info}>De cualquier precio</p>
-			<p className={style.info}>De cualquier tamaño</p>
+			<p className={`${style.info} ${style.infoLeft}`}>En cualquier fecha</p>
+			<p className={`${style.info} ${style.infoRight}`}>En cualquier país</p>
+			<p className={`${style.info} ${style.infoLeft}`}>De cualquier precio</p>
+			<p className={`${style.info} ${style.infoRight}`}>De cualquier tamaño</p>
 		</div>
 	)
 }

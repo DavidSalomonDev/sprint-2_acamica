@@ -5,19 +5,44 @@
     background-color: rgba(0,0,0,0.3);
 	width: 100%;
     color: #fff;
-    height: 45vh;
+    height: 50vh;
     position: relative;
     padding: 10rem 10%;
+	justify-content: center;
+	align-items: center;
 
+}
+
+header > *{
+	text-align: center;
 }
 
 .title{
+	display: block;
     font-size: 7rem;
     margin-bottom: 1rem;
+	letter-spacing: 2rem;
+	text-transform: uppercase;
+	text-shadow: 5px 5px 1rem rgba(0,0,0,0.7);
+	animation: moveDown 1s;
 }
 
 .info{
+	margin: .5rem 0;
     font-size: 2rem;
+	transition: all .3s ease-in-out;
+}
+
+.info:hover{
+	font-size: 3rem;
+}
+
+.infoLeft{
+	animation: moveLeft .8s ease-in-out;
+}
+
+.infoRight{
+	animation: moveRight 1.3s ease-in-out;
 }
 
 .video{
@@ -27,7 +52,7 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: .75;
+    opacity: .5;
     overflow: hidden;
 }
 
@@ -35,4 +60,31 @@
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+}
+
+@keyframes moveDown {
+	from{
+		transform: translateY(-10rem);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+
+@keyframes moveRight {
+	from{
+		transform: translateX(-100rem);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveLeft {
+	from{
+		transform: translateX(100rem);
+	}
+	to{
+		transform: translateX(0);
+	}
 }

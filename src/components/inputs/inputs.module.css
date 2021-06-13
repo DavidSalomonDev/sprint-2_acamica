@@ -10,7 +10,7 @@
 	align-items: center;
 	margin: 1.5rem 0.5rem;
 	padding: 0 0.5rem;
-	background-color: #fff;
+	background-color: var(--primary-white);
 	border-radius: 1rem;
 	box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.4);
 	width: 90%;
@@ -47,7 +47,7 @@
 	font-size: 1.25rem;
 	cursor: pointer;
 	line-height: 1.1;
-	background-color: #fff;
+	background-color: var(--primary-white);
 	background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
 
@@ -61,7 +61,7 @@
 }
 
 .countryOption * {
-	background-color: #eee;
+	background-color: var(--secondary-white);
 	cursor: pointer;
 	padding: 2rem;
 }
@@ -77,8 +77,8 @@
 }
 
 .clear {
-	background-color: #ff1744;
-	color: #fff;
+	background-color: var(--primary-red);
+	color: var(--primary-white);
 	font-size: 2rem;
 	border: none;
 	transition: all 0.3s;
@@ -91,7 +91,7 @@
 }
 
 .clear:hover {
-	background-color: #fff;
-	color: #ff1744;
-	font-weight: bold;
+	background-color: var(--primary-white);
+	color: var(--primary-red);
+	font-size: 3rem;
 }
