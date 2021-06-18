@@ -1,36 +1,24 @@
 import React from 'react'
-import 'date-fns'
-import DateFnsUtils from '@date-io/date-fns'
-import {
-	MuiPickersUtilsProvider,
-	KeyboardDatePicker,
-} from '@material-ui/pickers'
 import style from '../../inputs/inputs.module.css'
 
 const DateTime = () => {
-	const [selectedDate, setSelectedDate] = React.useState(new Date())
-
-	const handleDateChange = (date) => {
-		setSelectedDate(date)
-	}
+	const today = new Date()
+	const dateToValue = `${today.getFullYear()}-${(today.getMonth() + 1) > 9 ? (today.getMonth() + 1) : ('0' + (today.getMonth() + 1))}-${today.getDate() > 9 ? today.getDate() : ('0' + today.getDate())}`
 
 	return (
-		<div className={style.input}>
-			<MuiPickersUtilsProvider utils={DateFnsUtils}>
-				<KeyboardDatePicker
-					className={style.modal}
-					margin="normal"
-					// id="date-picker-dialog"
-					label="Cualquier fecha"
-					format="MM/dd/yyyy"
-					value={selectedDate}
-					onChange={handleDateChange}
-					KeyboardButtonProps={{
-						'aria-label': 'change date',
-					}}
-				/>
-			</MuiPickersUtilsProvider>
-		</div>
+		<div
+			className={style.input}
+
+		>
+			<input
+				className={style.date}
+				placeholder="Elige fecha"
+				type="date"
+				name="trip-start"
+				defaultValue={dateToValue}
+				min={dateToValue}
+			/>
+		</div >
 	)
 }
 

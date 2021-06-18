@@ -70,6 +70,19 @@
 	cursor: pointer;
 }
 
+.date {
+	font-size: 2rem;
+	font-family: inherit;
+	border: none;
+	padding: 0 0.7rem;
+	cursor: text;
+}
+
+.date:active,
+.date:focus {
+	outline: none;
+}
+
 .size {
 }
 

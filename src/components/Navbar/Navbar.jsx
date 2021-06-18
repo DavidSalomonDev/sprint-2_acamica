@@ -7,14 +7,22 @@ import Size from '../inputs/Size/Size'
 import Clear from '../inputs/Clear/Clear'
 
 const Navbar = () => {
-	// window.onscroll = () => {
-	// 	stickNavbar()
-	// }
 
 	return (
 		<div className={style.navbar} id='navbar'>
-			<DateTime />
-			<DateTime />
+			<DateTime
+				data={{
+					id: 'startDate',
+					name: 'startReservation'
+				}}
+
+			/>
+			<DateTime
+				data={{
+					id: 'endDate',
+					name: 'endReservation'
+				}}
+			/>
 			<Country />
 			<Price />
 			<Size />
