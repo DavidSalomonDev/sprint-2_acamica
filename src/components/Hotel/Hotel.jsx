@@ -42,7 +42,7 @@ const Hotel = (props) => {
 					<LocalHotel fontSize="large" />{props.data.rooms} Habitaciones
 				</span>
 				<span className={style.price}>
-					Precio: <AttachMoneyOutlined fontSize="large" /> {props.data.price}
+					Precio: <AttachMoneyOutlined fontSize="large"/> {props.data.price}
 				</span>
 			</div>
 			<button
