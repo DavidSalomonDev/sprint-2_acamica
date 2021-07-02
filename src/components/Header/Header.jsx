@@ -5,7 +5,7 @@ const Header = () => {
 	return (
 		<div className={style.header}>
 			<div className={style.video}>
-				<video className={style.content} autoPlay muted loop>
+				<video autoPlay muted loop>
 					<source src="./images/video.webm" type='video/webm' />
 					<source src="./images/video.mp4" type="video/mp4"></source>
 				</video>
