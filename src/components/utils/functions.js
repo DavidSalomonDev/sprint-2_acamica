@@ -34,6 +34,14 @@ export const dateConversor = (date) => {
 		months[fromMiliSeconds.getMonth()]
 	} de ${fromMiliSeconds.getFullYear()}`
 }
+/**
+ * Returns a readable with zeroes, for example 07-07-2021.
+ * It's needed to have a date value on input
+ */
+const today = new Date()
+export const dateToValue = `${today.getFullYear()}-${
+	today.getMonth() + 1 > 9 ? today.getMonth() + 1 : '0' + (today.getMonth() + 1)
+}-${today.getDate() > 9 ? today.getDate() : '0' + today.getDate()}`
 
 /**
  *

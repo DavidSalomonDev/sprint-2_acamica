@@ -1,24 +1,17 @@
 import React from 'react'
-import hotelsData from '../../../scripts/data'
-import { removeDuplicates } from '../../utils/functions'
 import style from '../../inputs/inputs.module.css'
 
 
 
 function Country() {
-	const countries = removeDuplicates(hotelsData, 'country')
-	const countryOptions = countries.map(country => {
-		return (
-			// eslint-disable-next-line react/jsx-key
-			<option key={country} value={country} className={style.countryOption}>{country}</option>
-		)
-	})
-
 	return (
 		<div className={`${style.input} ${style.country}`}>
 			<select name="country" id="country" className={style.countrySelect}>
 				<option value="" defaultValue>Todos los países</option>
-				{countryOptions}
+				<option value="Argentina" className={style.countryOption}>Argentina</option>
+				<option value="Brasil" className={style.countryOption}>Brasil</option>
+				<option value="Chile" className={style.countryOption}>Chile</option>
+				<option value="Uruguay" className={style.countryOption}>Uruguay</option>
 			</select>
 		</div>
 	)
