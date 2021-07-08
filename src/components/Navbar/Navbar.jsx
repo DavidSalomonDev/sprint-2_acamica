@@ -15,13 +15,16 @@ const Navbar = () => {
 					id: 'startDate',
 					name: 'startReservation'
 				}}
-
+			//value={startDate}
+			//onChange={handleStartDate}
 			/>
 			<DateTime
 				data={{
 					id: 'endDate',
 					name: 'endReservation'
 				}}
+			//value={endDate}
+			//onChange={handleEndDate}
 			/>
 			<Country />
 			<Price />

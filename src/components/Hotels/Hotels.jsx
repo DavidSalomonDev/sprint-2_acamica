@@ -9,6 +9,7 @@ const Hotels = () => {
 
 	const hotelComponents = hotelsData.map(hotel => {
 
+
 		return (
 			<Hotel
 				key={hotel.slug}

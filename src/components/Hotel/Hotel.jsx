@@ -4,7 +4,7 @@ import { LocationOn, LocalHotel, AttachMoneyOutlined } from '@material-ui/icons'
 import Swal from 'sweetalert2'
 import style from './Hotel.module.css'
 
-const Hotel = (props) => {
+const Hotel = ({ data }) => {
 
 	const alertaReservado = async () => {
 		await Swal.fire({
@@ -16,33 +16,33 @@ const Hotel = (props) => {
 	}
 
 	return (
-		<div className={style.hotel} id={props.data.slug}>
+		<div className={style.hotel} id={data.slug}>
 			<img
 				className={style.img}
-				src={props.data.photo}
-				alt={props.data.name}
+				src={data.photo}
+				alt={data.name}
 			/>
 			<h2 className={style.name}>
-				{props.data.name}
+				{data.name}
 			</h2>
 			<h3 className={style.startDate}>
-				Desde el {props.data.availabilityFrom}
+				Desde el {data.availabilityFrom}
 			</h3>
 			<h3 className={style.endDate}>
-				Hasta el {props.data.availabilityTo}
+				Hasta el {data.availabilityTo}
 			</h3>
 			<p className={style.description}>
-				{props.data.description}
+				{data.description}
 			</p>
 			<p className={style.location}>
-				<LocationOn /> {props.data.city}, {props.data.country}
+				<LocationOn /> {data.city}, {data.country}
 			</p>
 			<div className={style.wrapper}>
 				<span className={style.rooms}>
-					<LocalHotel fontSize="large" />{props.data.rooms} Habitaciones
+					<LocalHotel fontSize="large" /> {data.rooms}  Habitaciones
 				</span>
 				<span className={style.price}>
-					Precio: <AttachMoneyOutlined fontSize="large"/> {props.data.price}
+					Precio: <AttachMoneyOutlined fontSize="large" /> {data.price}
 				</span>
 			</div>
 			<button
