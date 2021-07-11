@@ -6,25 +6,22 @@ import Price from '../inputs/Price/Price'
 import Size from '../inputs/Size/Size'
 import Clear from '../inputs/Clear/Clear'
 
-const Navbar = () => {
-
+const Navbar = ({ setHotelsList }) => {
 	return (
 		<div className={style.navbar} id='navbar'>
 			<DateTime
 				data={{
 					id: 'startDate',
-					name: 'startReservation'
+					name: 'startReservation',
 				}}
-			//value={startDate}
-			//onChange={handleStartDate}
+				//value={startDate}
 			/>
 			<DateTime
 				data={{
 					id: 'endDate',
-					name: 'endReservation'
+					name: 'endReservation',
 				}}
-			//value={endDate}
-			//onChange={handleEndDate}
+				//value={endDate}
 			/>
 			<Country />
 			<Price />
@@ -33,6 +30,5 @@ const Navbar = () => {
 		</div>
 	)
 }
-
 
 export default Navbar

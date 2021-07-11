@@ -1,3 +1,5 @@
+import hotelsData from '../../scripts/data'
+
 /**
  * It returns a readable Spanish date from miliseconds data
  *
@@ -12,7 +14,7 @@ export const dateConversor = (date) => {
 		'Miercoles',
 		'Jueves',
 		'Viernes',
-		'Sábado'
+		'Sábado',
 	]
 	const months = [
 		'Enero',
@@ -26,11 +28,13 @@ export const dateConversor = (date) => {
 		'Septiembre',
 		'Octubre',
 		'Noviembre',
-		'Diciembre'
+		'Diciembre',
 	]
 	const fromMiliSeconds = new Date(date)
 
-	return `${days[fromMiliSeconds.getDay()]}, ${fromMiliSeconds.getDate()} de ${
+	return `${
+		days[fromMiliSeconds.getDay()]
+	}, ${fromMiliSeconds.getDate()} de ${
 		months[fromMiliSeconds.getMonth()]
 	} de ${fromMiliSeconds.getFullYear()}`
 }
@@ -40,7 +44,9 @@ export const dateConversor = (date) => {
  */
 const today = new Date()
 export const dateToValue = `${today.getFullYear()}-${
-	today.getMonth() + 1 > 9 ? today.getMonth() + 1 : '0' + (today.getMonth() + 1)
+	today.getMonth() + 1 > 9
+		? today.getMonth() + 1
+		: '0' + (today.getMonth() + 1)
 }-${today.getDate() > 9 ? today.getDate() : '0' + today.getDate()}`
 
 /**
@@ -76,11 +82,43 @@ export const sizeCategories = (array) => {
 	return withoutDuplicates
 }
 
-// export const highlightHotel = () => {
-// 	const highlight = 'highlight'
-// 	const highlightClass = 'highlight-is-active'
-// 	const body = document.querySelector('body')
-// 	let isHighlightActive = false
-// 	let highlightedHotel
-// 	let clickBubbling = 0
-// }
+/**
+ *
+ * @param {Array} hotels
+ * @param {string} country
+ * @returns Filter the array by their property
+ */
+export const filterHotels = (country) => {
+	const filteredArray = hotelsData
+		// .filter((hotel) => {
+		// 	if (startDate !== 'all') {
+		// 		return hotel.startDate === startDate
+		// 	}
+		// 	return hotel
+		// })
+		// .filter((hotel) => {
+		// 	if (endDate !== 'all') {
+		// 		return hotel.endDate === endDate
+		// 	}
+		// 	return hotel
+		// })
+		.filter((hotel) => {
+			if (country !== 'all') {
+				return hotel.country === country
+			}
+			return hotel
+		})
+	// .filter((hotel) => {
+	// 	if (size !== 'all') {
+	// 		return hotel.size === size
+	// 	}
+	// 	return hotel
+	// })
+	// .filter((hotel) => {
+	// 	if (price !== 'all') {
+	// 		return hotel.price === price
+	// 	}
+	// 	return hotel
+	// })
+	return filteredArray
+}

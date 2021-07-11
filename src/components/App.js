@@ -6,14 +6,14 @@ import Footer from './Footer/Footer.jsx'
 import hotelsData from '../scripts/data.js'
 
 const App = () => {
-
 	const [hotelsList, setHotelsList] = useState(hotelsData)
+	//const [country, setCountry] = useState('all')
 
 	return (
-		<div className="App">
-			<Header hotelsList={hotelsList}/>
-			<Navbar hotelsList={hotelsList} setHotelsList={setHotelsList}/>
-			<Hotels hotelsList={hotelsList}/>
+		<div className='App'>
+			<Header hotelsList={hotelsList} />
+			<Navbar setHotelsList={(hotels) => setHotelsList(hotels)} />
+			<Hotels hotelsList={hotelsList} />
 			<Footer />
 		</div>
 	)
