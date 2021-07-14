@@ -3,17 +3,20 @@ import style from '../../inputs/inputs.module.css'
 import { dateToValue } from '../../utils/functions'
 
 const StartDate = ({ inputValue, setStartDate }) => {
+	let stringDate = dateToValue(inputValue)
 	const handleStartDate = (e) => {
-		setStartDate(e.target.value)
+		const newDate = new Date(e.target.value).getTime()
+		setStartDate(newDate)
 	}
 	return (
 		<div className={style.input}>
 			<input
 				className={style.date}
-				placeholder={dateToValue}
+				placeholder={stringDate}
 				type='date'
 				name='trip-start'
-				value={inputValue}
+				value={stringDate}
+				min={dateToValue(new Date())}
 				onChange={handleStartDate}
 			/>
 		</div>

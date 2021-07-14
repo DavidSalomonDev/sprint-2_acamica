@@ -23,6 +23,7 @@ const Navbar = ({ filter, setter }) => {
 					id: 'endDate',
 					name: 'endReservation',
 				}}
+				startDate={filter.startDate}
 				setEndDate={setter.setEndDate}
 				inputValue={filter.endDate}
 			/>

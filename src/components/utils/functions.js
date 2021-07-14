@@ -44,17 +44,27 @@ export const today = new Date()
 const todayPlusMili = new Date().setDate(new Date().getDate() + 1)
 export const todayPlus = new Date(todayPlusMili)
 
-export const dateToValue = `${today.getFullYear()}-${
-	today.getMonth() + 1 > 9
-		? today.getMonth() + 1
-		: '0' + (today.getMonth() + 1)
-}-${today.getDate() > 9 ? today.getDate() : '0' + today.getDate()}`
+export const dateToValue = (date) => {
+	const regularDate = new Date(date)
+	return `${regularDate.getFullYear()}-${
+		regularDate.getMonth() + 1 > 9
+			? regularDate.getMonth() + 1
+			: '0' + (regularDate.getMonth() + 1)
+	}-${
+		regularDate.getDate() > 9
+			? regularDate.getDate()
+			: '0' + regularDate.getDate()
+	}`
+}
 
 export const dateToValuePlus = `${todayPlus.getFullYear()}-${
 	todayPlus.getMonth() + 1 > 9
 		? todayPlus.getMonth() + 1
 		: '0' + (todayPlus.getMonth() + 1)
 }-${todayPlus.getDate() > 9 ? todayPlus.getDate() : '0' + todayPlus.getDate()}`
+
+export const valueToDate = new Date(dateToValue)
+export const valueToDatePlus = new Date(dateToValuePlus)
 
 /**
  *
@@ -95,21 +105,35 @@ export const sizeCategories = (array) => {
  * @param {string} country
  * @returns Filter the array by their property
  */
-export const filterHotels = (array, country, price, size) => {
+export const filterHotels = (
+	array,
+	startDate,
+	endDate,
+	country,
+	price,
+	size
+) => {
 	const filteredArray = array
-		// .filter((hotel) => {
-		// 	if (startDate !== 'all') {
-		// 		console.log(hotel.availabilityFrom)
-		// 		return hotel.availabilityFrom === startDate
-		// 	}
-		// 	return hotel
-		// })
-		// .filter((hotel) => {
-		// 	if (endDate !== 'all') {
-		// 		return hotel.availabilityTo === endDate
-		// 	}
-		// 	return hotel
-		// })
+		.filter((hotel) => {
+			if (startDate === today.valueOf()) {
+				return hotel
+			} else {
+				if (startDate > today.valueOf()) {
+					return hotel.availabilityFrom >= startDate
+				}
+				return hotel
+			}
+		})
+		.filter((hotel) => {
+			if (endDate === todayPlus.valueOf()) {
+				return hotel
+			} else {
+				if (endDate > startDate) {
+					return hotel.availabilityTo <= endDate
+				}
+				return hotel
+			}
+		})
 		.filter((hotel) => {
 			if (country !== 'all') {
 				return hotel.country === country

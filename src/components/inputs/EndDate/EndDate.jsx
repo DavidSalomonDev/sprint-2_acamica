@@ -1,19 +1,22 @@
 import React from 'react'
 import style from '../../inputs/inputs.module.css'
+import { dateToValue, dateToValuePlus } from '../../utils/functions'
 
-const EndDate = ({ inputValue, setEndDate }) => {
+const EndDate = ({ startDate, inputValue, setEndDate }) => {
+	let stringDate = dateToValue(dateToValuePlus)
 	const handleEndDate = (e) => {
-		setEndDate(e.target.value)
+		const newDate = new Date(e.target.value).getTime()
+		setEndDate(newDate)
 	}
 	return (
 		<div className={style.input}>
 			<input
 				className={style.date}
-				placeholder='Elige fecha'
+				placeholder={stringDate}
 				type='date'
 				name='trip-end'
-				value={inputValue}
-				min={inputValue}
+				value={dateToValue(inputValue)}
+				min={dateToValue(startDate)}
 				onChange={handleEndDate}
 			/>
 		</div>

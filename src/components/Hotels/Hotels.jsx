@@ -5,8 +5,11 @@ import NotFound from '../NotFound/NotFound.jsx'
 import { dateConversor, filterHotels } from '../utils/functions'
 
 const Hotels = ({ hotelsList, filter }) => {
+	console.log(filter.endDate)
 	let filteredHotels = filterHotels(
 		hotelsList,
+		filter.startDate,
+		filter.endDate,
 		filter.country,
 		filter.price,
 		filter.size

@@ -15,7 +15,7 @@ const Clear = ({ setter }) => {
 	}
 
 	const resetFilters = () => {
-		setter.setStartDate(dateToValue)
+		setter.setStartDate(dateToValue(new Date()))
 		setter.setEndDate(dateToValuePlus)
 		setter.setCountry('all')
 		setter.setPrice('all')
