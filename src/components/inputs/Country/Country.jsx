@@ -11,8 +11,9 @@ const Country = ({ inputValue, setCountry }) => {
 				name='country'
 				id='country'
 				className={style.countrySelect}
-				onChange={handleCountry}>
-				<option value={inputValue}>Todos los países</option>
+				onChange={handleCountry}
+				value={inputValue}>
+				<option value='all'>Todos los países</option>
 				<option value='Argentina' className={style.countryOption}>
 					Argentina
 				</option>

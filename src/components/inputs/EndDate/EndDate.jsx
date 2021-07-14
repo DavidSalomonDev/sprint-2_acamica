@@ -12,7 +12,7 @@ const EndDate = ({ inputValue, setEndDate }) => {
 				placeholder='Elige fecha'
 				type='date'
 				name='trip-end'
-				defaultValue={inputValue}
+				value={inputValue}
 				min={inputValue}
 				onChange={handleEndDate}
 			/>

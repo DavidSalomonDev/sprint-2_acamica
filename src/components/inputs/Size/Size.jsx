@@ -7,11 +7,13 @@ const Size = ({ inputValue, setSize }) => {
 	}
 
 	return (
-		<div className={`${style.input} ${style.size}`} onChange={handleSize}>
-			<select name='rooms' id='rooms'>
-				<option value={inputValue} defaultValue>
-					Todos los tamaños
-				</option>
+		<div className={`${style.input} ${style.size}`}>
+			<select
+				name='rooms'
+				id='rooms'
+				onChange={handleSize}
+				value={inputValue}>
+				<option value='all'>Todos los tamaños</option>
 				<option value='pequeño'>Pequeño</option>
 				<option value='mediano'>Mediano</option>
 				<option value='grande'>Grande</option>

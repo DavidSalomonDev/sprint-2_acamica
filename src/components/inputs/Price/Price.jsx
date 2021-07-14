@@ -8,8 +8,12 @@ const Price = ({ inputValue, setPrice }) => {
 
 	return (
 		<div className={`${style.input} ${style.size}`}>
-			<select name='rooms' id='rooms' onChange={handlePrice} value='all'>
-				<option value={inputValue}>Todos los precios</option>
+			<select
+				name='rooms'
+				id='rooms'
+				onChange={handlePrice}
+				value={inputValue}>
+				<option value='all'>Todos los precios</option>
 				<option value='1'>$</option>
 				<option value='2'>$$</option>
 				<option value='3'>$$$</option>

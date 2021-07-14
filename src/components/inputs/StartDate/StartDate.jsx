@@ -12,7 +12,7 @@ const StartDate = ({ inputValue, setStartDate }) => {
 				placeholder='Elige fecha'
 				type='date'
 				name='trip-start'
-				defaultValue={inputValue}
+				value={inputValue}
 				min={inputValue}
 				onChange={handleStartDate}
 			/>
