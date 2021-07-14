@@ -129,7 +129,10 @@ export const filterHotels = (
 				return hotel
 			} else {
 				if (endDate > startDate) {
-					return hotel.availabilityTo <= endDate
+					return (
+						hotel.availabilityTo >= startDate &&
+						hotel.availabilityTo <= endDate
+					)
 				}
 				return hotel
 			}

@@ -1,6 +1,13 @@
 import React from 'react'
 import style from './Header.module.css'
-import { showCountry, showPrice, showSize } from '../utils/functions'
+import {
+	today,
+	dateConversor,
+	showCountry,
+	showPrice,
+	showSize,
+	todayPlus,
+} from '../utils/functions'
 
 const Header = ({ filter }) => {
 	return (
@@ -13,7 +20,12 @@ const Header = ({ filter }) => {
 			</div>
 			<h1 className={style.title}>Hoteles</h1>
 			<p className={`${style.info} ${style.infoLeft}`}>
-				De cualquier fecha
+				{filter.startDate === today.valueOf() &&
+				filter.endDate !== todayPlus
+					? 'De cualquier fecha'
+					: `Del ${dateConversor(
+							filter.startDate
+					  )} al ${dateConversor(filter.endDate)}`}
 			</p>
 			<p className={`${style.info} ${style.infoRight}`}>
 				{showCountry(filter.country)}
