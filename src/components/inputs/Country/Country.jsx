@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '../../inputs/inputs.module.css'
 
-const Country = ({ setCountry }) => {
+const Country = ({ inputValue, setCountry }) => {
 	const handleCountry = (e) => {
 		setCountry(e.target.value)
 	}
@@ -12,7 +12,7 @@ const Country = ({ setCountry }) => {
 				id='country'
 				className={style.countrySelect}
 				onChange={handleCountry}>
-				<option value='all'>Todos los países</option>
+				<option value={inputValue}>Todos los países</option>
 				<option value='Argentina' className={style.countryOption}>
 					Argentina
 				</option>

@@ -43,11 +43,20 @@ export const dateConversor = (date) => {
  * It's needed to have a date value on input
  */
 const today = new Date()
+const todayPlusMili = new Date().setDate(new Date().getDate() + 1)
+const todayPlus = new Date(todayPlusMili)
+
 export const dateToValue = `${today.getFullYear()}-${
 	today.getMonth() + 1 > 9
 		? today.getMonth() + 1
 		: '0' + (today.getMonth() + 1)
 }-${today.getDate() > 9 ? today.getDate() : '0' + today.getDate()}`
+
+export const dateToValuePlus = `${todayPlus.getFullYear()}-${
+	todayPlus.getMonth() + 1 > 9
+		? todayPlus.getMonth() + 1
+		: '0' + (todayPlus.getMonth() + 1)
+}-${todayPlus.getDate() > 9 ? todayPlus.getDate() : '0' + todayPlus.getDate()}`
 
 /**
  *
