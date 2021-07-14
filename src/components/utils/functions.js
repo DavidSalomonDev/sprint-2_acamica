@@ -1,5 +1,3 @@
-import hotelsData from '../../scripts/data'
-
 /**
  * It returns a readable Spanish date from miliseconds data
  *
@@ -42,9 +40,9 @@ export const dateConversor = (date) => {
  * Returns a readable with zeroes, for example 07-07-2021.
  * It's needed to have a date value on input
  */
-const today = new Date()
+export const today = new Date()
 const todayPlusMili = new Date().setDate(new Date().getDate() + 1)
-const todayPlus = new Date(todayPlusMili)
+export const todayPlus = new Date(todayPlusMili)
 
 export const dateToValue = `${today.getFullYear()}-${
 	today.getMonth() + 1 > 9
@@ -77,10 +75,10 @@ export const removeDuplicates = (arrayElement, objectProperty) => {
 
 export const sizeConvertor = (hotelRooms) => {
 	if (hotelRooms < 10) {
-		return 'Pequeño'
+		return 'pequeño'
 	} else if (hotelRooms >= 10 && hotelRooms < 20) {
-		return 'Mediano'
-	} else return 'Grande'
+		return 'mediano'
+	} else return 'grande'
 }
 
 export const sizeCategories = (array) => {
@@ -97,17 +95,18 @@ export const sizeCategories = (array) => {
  * @param {string} country
  * @returns Filter the array by their property
  */
-export const filterHotels = (country) => {
-	const filteredArray = hotelsData
+export const filterHotels = (array, country, price, size) => {
+	const filteredArray = array
 		// .filter((hotel) => {
 		// 	if (startDate !== 'all') {
-		// 		return hotel.startDate === startDate
+		// 		console.log(hotel.availabilityFrom)
+		// 		return hotel.availabilityFrom === startDate
 		// 	}
 		// 	return hotel
 		// })
 		// .filter((hotel) => {
 		// 	if (endDate !== 'all') {
-		// 		return hotel.endDate === endDate
+		// 		return hotel.availabilityTo === endDate
 		// 	}
 		// 	return hotel
 		// })
@@ -117,17 +116,54 @@ export const filterHotels = (country) => {
 			}
 			return hotel
 		})
-	// .filter((hotel) => {
-	// 	if (size !== 'all') {
-	// 		return hotel.size === size
-	// 	}
-	// 	return hotel
-	// })
-	// .filter((hotel) => {
-	// 	if (price !== 'all') {
-	// 		return hotel.price === price
-	// 	}
-	// 	return hotel
-	// })
+		.filter((hotel) => {
+			if (price !== 'all') {
+				return hotel.price === price
+			}
+			return hotel
+		})
+		.filter((hotel) => {
+			if (size !== 'all') {
+				const hotelSizeCategory = sizeConvertor(hotel.rooms)
+				return hotelSizeCategory === size
+			}
+			return hotel
+		})
+
 	return filteredArray
+}
+
+export const showCountry = (country) => {
+	if (country === 'Argentina') {
+		return 'En Argentina.'
+	} else if (country === 'Brasil') {
+		return 'En Brasil.'
+	} else if (country === 'Chile') {
+		return 'En Chile.'
+	} else if (country === 'Uruguay') {
+		return 'En Uruguay.'
+	}
+	return 'En cualquier país.'
+}
+
+export const showPrice = (price) => {
+	if (price === 1) {
+		return 'De bajo precio'
+	} else if (price === 2 || price === 3) {
+		return 'De precio mediano.'
+	} else if (price === 4) {
+		return 'De precios especiales'
+	}
+	return 'De cualquier precio.'
+}
+
+export const showSize = (size) => {
+	if (size === 'pequeño') {
+		return 'De tamaño pequeño'
+	} else if (size === 'mediano') {
+		return 'De tamaño mediano.'
+	} else if (size === 'grande') {
+		return 'De tamaño grande'
+	}
+	return 'De cualquier tamaño.'
 }

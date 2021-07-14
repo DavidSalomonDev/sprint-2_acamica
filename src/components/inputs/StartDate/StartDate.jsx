@@ -1,5 +1,6 @@
 import React from 'react'
 import style from '../../inputs/inputs.module.css'
+import { dateToValue } from '../../utils/functions'
 
 const StartDate = ({ inputValue, setStartDate }) => {
 	const handleStartDate = (e) => {
@@ -9,11 +10,10 @@ const StartDate = ({ inputValue, setStartDate }) => {
 		<div className={style.input}>
 			<input
 				className={style.date}
-				placeholder='Elige fecha'
+				placeholder={dateToValue}
 				type='date'
 				name='trip-start'
 				value={inputValue}
-				min={inputValue}
 				onChange={handleStartDate}
 			/>
 		</div>

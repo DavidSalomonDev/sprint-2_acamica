@@ -3,7 +3,9 @@ import style from '../../inputs/inputs.module.css'
 
 const Price = ({ inputValue, setPrice }) => {
 	const handlePrice = (e) => {
-		setPrice(e.target.value)
+		let intNum =
+			e.target.value !== 'all' ? parseInt(e.target.value, 10) : 'all'
+		setPrice(intNum)
 	}
 
 	return (
@@ -14,10 +16,10 @@ const Price = ({ inputValue, setPrice }) => {
 				onChange={handlePrice}
 				value={inputValue}>
 				<option value='all'>Todos los precios</option>
-				<option value='1'>$</option>
-				<option value='2'>$$</option>
-				<option value='3'>$$$</option>
-				<option value='4'>$$$$</option>
+				<option value={1}>$</option>
+				<option value={2}>$$</option>
+				<option value={3}>$$$</option>
+				<option value={4}>$$$$</option>
 			</select>
 		</div>
 	)

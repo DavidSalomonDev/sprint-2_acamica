@@ -4,12 +4,12 @@ import Navbar from './Navbar/Navbar.jsx'
 import Hotels from './Hotels/Hotels.jsx'
 import Footer from './Footer/Footer.jsx'
 import hotelsData from '../scripts/data.js'
-import { dateToValue, dateToValuePlus } from './utils/functions.js'
+import { today, todayPlus } from './utils/functions.js'
 
 const App = () => {
 	const [hotelsList, setHotelsList] = useState(hotelsData)
-	const [startDate, setStartDate] = useState(dateToValue)
-	const [endDate, setEndDate] = useState(dateToValuePlus)
+	const [startDate, setStartDate] = useState(today.valueOf())
+	const [endDate, setEndDate] = useState(todayPlus.valueOf())
 	const [country, setCountry] = useState('all')
 	const [price, setPrice] = useState('all')
 	const [size, setSize] = useState('all')
