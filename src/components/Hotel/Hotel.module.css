@@ -100,7 +100,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 1.4rem 1rem;
-	font-size: 2rem;
+	font-size: 1.8rem;
 	box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, 0.7);
 	background-color: dodgerblue;
 	color: var(--primary-white);

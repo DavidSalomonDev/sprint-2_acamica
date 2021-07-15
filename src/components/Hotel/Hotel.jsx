@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { LocationOn, LocalHotel, AttachMoneyOutlined } from '@material-ui/icons'
+import { LocationOn, LocalHotel } from '@material-ui/icons'
 import Swal from 'sweetalert2'
+import { priceIcon } from '../utils/functions'
 import style from './Hotel.module.css'
 
 const Hotel = ({ data }) => {
@@ -13,6 +14,8 @@ const Hotel = ({ data }) => {
 			timer: 1500,
 		})
 	}
+
+
 
 	return (
 		<div className={style.hotel} id={data.slug}>
@@ -31,8 +34,7 @@ const Hotel = ({ data }) => {
 					<LocalHotel fontSize='large' /> {data.rooms} Habitaciones
 				</span>
 				<span className={style.price}>
-					Precio: <AttachMoneyOutlined fontSize='large' />{' '}
-					{data.price}
+					Precio:{priceIcon(data.price)}
 				</span>
 			</div>
 			<button className={style.btn} onClick={alertaReservado}>

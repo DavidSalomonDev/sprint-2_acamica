@@ -2,7 +2,7 @@ import React from 'react'
 import Swal from 'sweetalert2'
 import style from '../../inputs/inputs.module.css'
 import { Delete } from '@material-ui/icons'
-import { dateToValue, dateToValuePlus } from '../../utils/functions'
+import { today, todayPlus } from '../../utils/functions'
 
 const Clear = ({ setter }) => {
 	const alertaLimpiar = () => {
@@ -15,8 +15,8 @@ const Clear = ({ setter }) => {
 	}
 
 	const resetFilters = () => {
-		setter.setStartDate(dateToValue(new Date()))
-		setter.setEndDate(dateToValuePlus)
+		setter.setStartDate(today.valueOf())
+		setter.setEndDate(todayPlus.valueOf())
 		setter.setCountry('all')
 		setter.setPrice('all')
 		setter.setSize('all')

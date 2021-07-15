@@ -5,7 +5,7 @@ import { dateToValue, dateToValuePlus } from '../../utils/functions'
 const EndDate = ({ startDate, inputValue, setEndDate }) => {
 	let stringDate = dateToValue(dateToValuePlus)
 	const handleEndDate = (e) => {
-		const newDate = new Date(e.target.value).getTime()
+		const newDate = new Date(e.target.value).valueOf()
 		setEndDate(newDate)
 	}
 	return (
