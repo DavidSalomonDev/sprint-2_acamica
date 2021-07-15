@@ -51,22 +51,22 @@
 	background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
 
-.countrySelect:active,
-.countrySelect:focus {
+option:active,
+select:focus {
 	outline: none;
 }
 
-.countrySelect:active ~ option:first-child {
+select:active ~ option:first-child {
 	display: none;
 }
 
-.countryOption * {
+option * {
 	background-color: var(--secondary-white);
 	cursor: pointer;
 	padding: 2rem;
 }
 
-.countryOption:hover {
+option:hover {
 	cursor: pointer;
 }
 
@@ -81,12 +81,6 @@
 .date:active,
 .date:focus {
 	outline: none;
-}
-
-.size {
-}
-
-.price {
 }
 
 .clear {
