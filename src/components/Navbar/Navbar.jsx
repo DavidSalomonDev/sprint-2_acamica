@@ -16,6 +16,7 @@ const Navbar = ({ filter, setter }) => {
 					name: 'startReservation',
 				}}
 				setStartDate={setter.setStartDate}
+				setEndDate={setter.setEndDate}
 				inputValue={filter.startDate}
 			/>
 			<EndDate
@@ -34,6 +35,7 @@ const Navbar = ({ filter, setter }) => {
 			<Price setPrice={setter.setPrice} inputValue={filter.price} />
 			<Size setSize={setter.setSize} inputValue={filter.size} />
 			<Clear setter={setter} />
+
 		</div>
 	)
 }
