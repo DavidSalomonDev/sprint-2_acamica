@@ -18,6 +18,7 @@ const Navbar = ({ filter, setter }) => {
 				setStartDate={setter.setStartDate}
 				setEndDate={setter.setEndDate}
 				inputValue={filter.startDate}
+				endDate={filter.endDate}
 			/>
 			<EndDate
 				data={{

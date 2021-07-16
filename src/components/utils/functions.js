@@ -127,25 +127,26 @@ export const filterHotels = (
   size
 ) => {
   const filteredArray = array
+    // .filter((hotel) => {
+    //   if (startDate === today.valueOf()) {
+    //     return hotel;
+    //   } else {
+    //     if (startDate > today.valueOf()) {
+    //       return hotel.availabilityFrom >= startDate;
+    //     }
+    //     return hotel;
+    //   }
+    // })
     .filter((hotel) => {
-      if (startDate === today.valueOf()) {
+      if (startDate === " " || endDate === " ") {
         return hotel;
       } else {
-        if (startDate > today.valueOf()) {
-          return hotel.availabilityFrom >= startDate;
-        }
-        return hotel;
-      }
-    })
-    .filter((hotel) => {
-      if (endDate === todayPlus.valueOf()) {
-        return hotel;
-      } else {
-        if (endDate > startDate) {
+        if (endDate >= startDate) {
           return (
             hotel.availabilityTo >= startDate && hotel.availabilityTo <= endDate
           );
         }
+
         return hotel;
       }
     })
