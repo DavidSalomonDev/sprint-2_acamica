@@ -66,6 +66,19 @@ export const dateToValuePlus = `${todayPlus.getFullYear()}-${
 export const valueToDate = new Date(dateToValue);
 export const valueToDatePlus = new Date(dateToValuePlus);
 
+export const dateToJS = (date) => {
+  const regularDate = new Date(date);
+  return `${regularDate.getFullYear()}/${
+    regularDate.getMonth() + 1 > 9
+      ? regularDate.getMonth() + 1
+      : "0" + (regularDate.getMonth() + 1)
+  }/${
+    regularDate.getDate() > 9
+      ? regularDate.getDate()
+      : "0" + regularDate.getDate()
+  }`;
+};
+
 /**
  *
  * Returns an array without duplicates, it iterates over an array that contains objects with several properties

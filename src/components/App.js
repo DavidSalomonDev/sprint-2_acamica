@@ -8,8 +8,8 @@ import { today, todayPlus } from "./utils/functions.js";
 
 const App = () => {
   const [hotelsList, setHotelsList] = useState(hotelsData);
-  const [startDate, setStartDate] = useState(today.valueOf());
-  const [endDate, setEndDate] = useState(todayPlus.valueOf());
+  const [startDate, setStartDate] = useState(today.getTime());
+  const [endDate, setEndDate] = useState(todayPlus.getTime());
   const [country, setCountry] = useState("all");
   const [price, setPrice] = useState("all");
   const [size, setSize] = useState("all");
