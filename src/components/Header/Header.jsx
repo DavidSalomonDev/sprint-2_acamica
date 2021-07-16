@@ -20,12 +20,12 @@ const Header = ({ filter }) => {
 			</div>
 			<h1 className={style.title}>Hoteles</h1>
 			<p className={`${style.info} ${style.infoLeft}`}>
-				{filter.startDate === today.valueOf() &&
-				filter.endDate !== todayPlus
+				{filter.startDate === ' ' ||
+					filter.endDate === ' '
 					? 'De cualquier fecha'
 					: `Del ${dateConversor(
-							filter.startDate
-					  )} al ${dateConversor(filter.endDate)}`}
+						filter.startDate
+					)} al ${dateConversor(filter.endDate)}`}
 			</p>
 			<p className={`${style.info} ${style.infoRight}`}>
 				{showCountry(filter.country)}

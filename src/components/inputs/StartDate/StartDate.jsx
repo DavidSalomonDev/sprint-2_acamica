@@ -7,7 +7,6 @@ const StartDate = ({ inputValue, setStartDate, setEndDate }) => {
 	const handleStartDate = (e) => {
 		const newDate = new Date(e.target.value).getTime() + 21600000
 		setStartDate(newDate)
-		setEndDate(newDate + 864000000)
 	}
 	return (
 		<div className={style.input}>
