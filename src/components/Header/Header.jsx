@@ -1,12 +1,12 @@
 import React from 'react'
 import style from './Header.module.css'
 import {
-	today,
+	
 	dateConversor,
 	showCountry,
 	showPrice,
 	showSize,
-	todayPlus,
+	
 } from '../utils/functions'
 
 const Header = ({ filter }) => {
