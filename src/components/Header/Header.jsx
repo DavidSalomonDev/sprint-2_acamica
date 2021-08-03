@@ -19,8 +19,8 @@ const Header = ({ filter }) => {
 			<h1 className={style.title}>Hoteles</h1>
 			<p className={`${style.info} ${style.infoLeft}`}>
 				{!filter.startDate || !filter.endDate
-					? 'De cualquier fecha'
-					: `Del ${dateConversor(filter.startDate)} al ${dateConversor(filter.endDate)}`}
+					? 'En cualquier fecha'
+					: `Desde el ${dateConversor(filter.startDate)} hasta el ${dateConversor(filter.endDate)}`}
 			</p>
 			<p className={`${style.info} ${style.infoRight}`}>
 				{showCountry(filter.country)}

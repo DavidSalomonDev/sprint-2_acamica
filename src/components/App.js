@@ -20,7 +20,6 @@ const App = () => {
         filter={{ startDate, endDate, country, price, size }}
       />
       <Navbar
-        hotelsList={hotelsList}
         setHotelsList={(hotels) => setHotelsList(hotels)}
         filter={{ startDate, endDate, country, price, size }}
         setter={{
