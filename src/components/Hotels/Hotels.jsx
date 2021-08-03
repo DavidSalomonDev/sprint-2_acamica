@@ -1,8 +1,9 @@
 import React from 'react'
-import Hotel from '../Hotel/Hotel.jsx'
+import Hotel from './Hotel/Hotel.jsx'
 import style from './Hotels.module.css'
-import NotFound from '../NotFound/NotFound.jsx'
-import { dateConversor, filterHotels } from '../utils/functions'
+import NotFound from './NotFound/NotFound'
+import { filterHotels } from '../../utils/functions'
+import dateConversor from '../../utils/dateConversor'
 
 const Hotels = ({ hotelsList, filter }) => {
 	let filteredHotels = filterHotels(
@@ -35,9 +36,9 @@ const Hotels = ({ hotelsList, filter }) => {
 
 	if (filteredHotels.length !== 0) {
 		return (
-			<div className={style.hotels} id='hotels'>
+			<main className={style.hotels} id='hotels'>
 				{hotelComponents}
-			</div>
+			</main>
 		)
 	}
 	return <NotFound />

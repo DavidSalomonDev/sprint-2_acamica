@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Header from "./Header/Header.jsx";
-import Navbar from "./Navbar/Navbar.jsx";
+import Navbar from "./Header/Navbar/Navbar.jsx";
 import Hotels from "./Hotels/Hotels.jsx";
 import Footer from "./Footer/Footer.jsx";
-import hotelsData from "../scripts/data.js";
+import hotelsData from "../data/data.js";
 
 const App = () => {
   const [hotelsList, setHotelsList] = useState(hotelsData);
-  const [startDate, setStartDate] = useState(" ");
-  const [endDate, setEndDate] = useState(" ");
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
   const [country, setCountry] = useState("all");
   const [price, setPrice] = useState("all");
   const [size, setSize] = useState("all");

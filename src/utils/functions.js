@@ -1,41 +1,6 @@
 import { AttachMoneyOutlined } from "@material-ui/icons";
 
-/**
- * It returns a readable Spanish date from miliseconds data
- *
- * @param {number} date Date in milisencods
- * @returns Date in Spanish format
- */
-export const dateConversor = (date) => {
-  const days = [
-    "Domingo",
-    "Lunes",
-    "Martes",
-    "Miercoles",
-    "Jueves",
-    "Viernes",
-    "Sábado",
-  ];
-  const months = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
-  ];
-  const fromMiliSeconds = new Date(date);
 
-  return `${days[fromMiliSeconds.getDay()]}, ${fromMiliSeconds.getDate()} de ${
-    months[fromMiliSeconds.getMonth()]
-  } de ${fromMiliSeconds.getFullYear()}`;
-};
 /**
  * Returns a readable with zeroes, for example 07-07-2021.
  * It's needed to have a date value on input
@@ -138,7 +103,7 @@ export const filterHotels = (
     //   }
     // })
     .filter((hotel) => {
-      if (startDate === " " || endDate === " ") {
+      if (!startDate || !endDate) {
         return hotel;
       } else {
         if (endDate >= startDate) {

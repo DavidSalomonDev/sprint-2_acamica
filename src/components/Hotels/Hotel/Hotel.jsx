@@ -1,13 +1,12 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import { LocationOn, LocalHotel } from '@material-ui/icons'
 import Swal from 'sweetalert2'
-import { priceIcon } from '../utils/functions'
+import { priceIcon } from '../../../utils/functions'
 import style from './Hotel.module.css'
 
 const Hotel = ({ data }) => {
-	const alertaReservado = () => {
-		Swal.fire({
+	const alertaReservado = async () => {
+		await Swal.fire({
 			icon: 'success',
 			title: 'Hotel Reservado',
 			showConfirmButton: false,
@@ -18,7 +17,7 @@ const Hotel = ({ data }) => {
 
 
 	return (
-		<div className={style.hotel} id={data.slug}>
+		<section className={style.hotel} id={data.slug}>
 			<img className={style.img} src={data.photo} alt={data.name} />
 			<h2 className={style.name}>{data.name}</h2>
 			<h3 className={style.startDate}>
@@ -40,7 +39,7 @@ const Hotel = ({ data }) => {
 			<button className={style.btn} onClick={alertaReservado}>
 				Reservar
 			</button>
-		</div>
+		</section>
 	)
 }
 

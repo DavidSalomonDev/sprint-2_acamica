@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../../inputs/inputs.module.css'
+import style from '../inputs.module.css'
 
 const Price = ({ inputValue, setPrice }) => {
 	const handlePrice = (e) => {

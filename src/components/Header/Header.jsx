@@ -1,17 +1,15 @@
 import React from 'react'
 import style from './Header.module.css'
+import dateConversor from '../../utils/dateConversor'
 import {
-	
-	dateConversor,
 	showCountry,
 	showPrice,
-	showSize,
-	
-} from '../utils/functions'
+	showSize
+} from '../../utils/functions'
 
 const Header = ({ filter }) => {
 	return (
-		<div className={style.header}>
+		<header className={style.header}>
 			<div className={style.video}>
 				<video autoPlay muted loop>
 					<source src='./images/video.webm' type='video/webm' />
@@ -20,12 +18,9 @@ const Header = ({ filter }) => {
 			</div>
 			<h1 className={style.title}>Hoteles</h1>
 			<p className={`${style.info} ${style.infoLeft}`}>
-				{filter.startDate === ' ' ||
-					filter.endDate === ' '
+				{!filter.startDate || !filter.endDate
 					? 'De cualquier fecha'
-					: `Del ${dateConversor(
-						filter.startDate
-					)} al ${dateConversor(filter.endDate)}`}
+					: `Del ${dateConversor(filter.startDate)} al ${dateConversor(filter.endDate)}`}
 			</p>
 			<p className={`${style.info} ${style.infoRight}`}>
 				{showCountry(filter.country)}
@@ -36,7 +31,7 @@ const Header = ({ filter }) => {
 			<p className={`${style.info} ${style.infoRight}`}>
 				{showSize(filter.size)}
 			</p>
-		</div>
+		</header>
 	)
 }
 

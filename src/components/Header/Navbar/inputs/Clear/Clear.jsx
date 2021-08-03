@@ -1,6 +1,6 @@
 import React from 'react'
 import Swal from 'sweetalert2'
-import style from '../../inputs/inputs.module.css'
+import style from '../inputs.module.css'
 import { Delete } from '@material-ui/icons'
 
 const Clear = ({ setter }) => {
@@ -14,8 +14,8 @@ const Clear = ({ setter }) => {
 	}
 
 	const resetFilters = () => {
-		setter.setStartDate(' ')
-		setter.setEndDate(' ')
+		setter.setStartDate('')
+		setter.setEndDate('')
 		setter.setCountry('all')
 		setter.setPrice('all')
 		setter.setSize('all')

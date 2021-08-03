@@ -1,6 +1,6 @@
 import React from 'react'
-import style from '../../inputs/inputs.module.css'
-import { dateToValue } from '../../utils/functions'
+import style from '../inputs.module.css'
+import { dateToValue } from '../../../../../utils/functions'
 
 
 const EndDate = ({ startDate, inputValue, setEndDate }) => {
@@ -16,7 +16,7 @@ const EndDate = ({ startDate, inputValue, setEndDate }) => {
 				className={style.date}
 				type='date'
 				name='trip-end'
-				value={dateToValue(inputValue)}
+				value={inputValue && dateToValue(inputValue)}
 				min={dateToValue(startDate)}
 				onChange={handleEndDate}
 
