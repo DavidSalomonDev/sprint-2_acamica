@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '../inputs.module.css'
-import { dateToValue } from '../../../../../utils/functions'
+import { dateToValue } from '../../../../../utils/dates'
 import Swal from 'sweetalert2'
 
 const StartDate = ({ endDate, inputValue, setStartDate, setEndDate }) => {

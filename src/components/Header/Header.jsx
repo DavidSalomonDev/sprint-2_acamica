@@ -5,7 +5,7 @@ import {
 	showCountry,
 	showPrice,
 	showSize
-} from '../../utils/functions'
+} from '../../utils/readables'
 
 const Header = ({ filter }) => {
 	return (

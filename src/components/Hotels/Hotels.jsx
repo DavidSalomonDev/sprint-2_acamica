@@ -2,7 +2,7 @@ import React from 'react'
 import Hotel from './Hotel/Hotel.jsx'
 import style from './Hotels.module.css'
 import NotFound from './NotFound/NotFound'
-import { filterHotels } from '../../utils/functions'
+import filterHotels from '../../utils/filterHotels'
 import dateConversor from '../../utils/dateConversor'
 
 const Hotels = ({ hotelsList, filter }) => {

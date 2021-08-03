@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '../inputs.module.css'
-import { dateToValue } from '../../../../../utils/functions'
+import { dateToValue } from '../../../../../utils/dates'
 
 
 const EndDate = ({ startDate, inputValue, setEndDate }) => {

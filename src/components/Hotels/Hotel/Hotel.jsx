@@ -1,7 +1,7 @@
 import React from 'react'
 import { LocationOn, LocalHotel } from '@material-ui/icons'
 import Swal from 'sweetalert2'
-import { priceIcon } from '../../../utils/functions'
+import PriceIcon from './PriceIcon'
 import style from './Hotel.module.css'
 
 const Hotel = ({ data }) => {
@@ -13,8 +13,6 @@ const Hotel = ({ data }) => {
 			timer: 1500,
 		})
 	}
-
-
 
 	return (
 		<section className={style.hotel} id={data.slug}>
@@ -33,7 +31,7 @@ const Hotel = ({ data }) => {
 					<LocalHotel fontSize='large' /> {data.rooms} Habitaciones
 				</span>
 				<span className={style.price}>
-					Precio:{priceIcon(data.price)}
+					Precio: <PriceIcon price={data.price}/>
 				</span>
 			</div>
 			<button className={style.btn} onClick={alertaReservado}>
